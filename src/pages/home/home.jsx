@@ -272,11 +272,17 @@ const Home = ({ places }) => {
   
 
   const isCargarButtonDisabled =
-    !nombre ||
-    !telefono ||
-    !longitud ||
-    !/^\d+$/.test(telefono) ||
-    !/^-?\d+(\.\d+)?$/.test(longitud);
+  !nombre ||
+  !telefono ||
+  !longitud ||
+  !latitud ||
+  !url ||
+  !descripcion ||
+  !horario ||
+  !tipo ||
+  !/^\d+$/.test(telefono) ||
+  !/^-?\d+(\.\d+)?$/.test(longitud) ||
+  !/^-?\d+(\.\d+)?$/.test(latitud);
 
 
   const handleEliminarPuntoInteres = async (placeId) => {
